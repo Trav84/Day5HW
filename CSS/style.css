@@ -25,7 +25,7 @@ html {
   .header .title {
     padding-bottom: 0.625em;
     color: white;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 2em; }
   .header .blog-subtitle {
     visibility: hidden; }
@@ -44,7 +44,8 @@ html {
     text-decoration: underline;
     color: grey; }
   .blog-content p {
-    margin-top: 1.4em; }
+    margin-top: 1.4em;
+    font-weight: 100; }
   .blog-content #para1 {
     margin-top: 0; }
   .blog-content #pull-quote {
@@ -57,11 +58,23 @@ html {
   .blog-content .box-button {
     width: 2em;
     background-color: #5e6a6f;
-    display: inline-block;
+    float: left;
     text-align: center;
     padding: 0.7em 0.2em;
+    margin: 0 0.2em;
     color: white;
     margin-top: 1em; }
+  .blog-content .box-expanded {
+    float: left;
+    padding: 0.7em 1em;
+    background-color: #a3b3bf;
+    height: 1.125em;
+    display: none;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.1em; }
+  .blog-content .box-wrapper {
+    width: 100%; }
 
 .social {
   margin: 0 1.125em;
@@ -84,10 +97,20 @@ html {
       color: #3889E0; }
   .social .ad-box {
     text-align: right; }
-    .social .ad-box p {
-      padding-top: 1em;
+    .social .ad-box h1 {
+      padding: 1em 0;
       text-decoration: underline;
       color: #8fa1ad; }
+    .social .ad-box h2 {
+      color: #3889E0; }
+    .social .ad-box .sidebar-heading {
+      display: none;
+      text-align: left; }
+      .social .ad-box .sidebar-heading p {
+        color: grey;
+        font-weight: 100;
+        letter-spacing: 0.1em;
+        line-height: 1.4m; }
   .social .ad {
     margin-top: 4.1em;
     width: 100%; }
@@ -95,6 +118,8 @@ html {
 .popular-posts {
   margin: 0 1.125em;
   margin-top: 3.62em; }
+  .popular-posts div {
+    position: relative; }
   .popular-posts .image1 {
     background-image: url(http://placekitten.com/277/200);
     height: 12.5em;
@@ -120,11 +145,12 @@ html {
     font-size: 2em;
     font-weight: 700; }
   .popular-posts p {
-    padding-top: 9.2em;
-    padding-left: 1em;
+    bottom: 0.4em;
+    left: 0.4em;
     color: white;
     font-weight: 300;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    position: absolute; }
 
 .footer {
   background-color: #03354f;
@@ -139,6 +165,8 @@ html {
     margin-bottom: 0.625em; }
   .footer h1 {
     line-height: 1.4em; }
+  .footer #last-nav {
+    display: block; }
 
 /* CSS for medium devices ≥768px */
 @media (min-width: 768px) {
@@ -164,7 +192,10 @@ html {
     font-weight: 100;
     padding-bottom: 12em; }
   .header .blog-subtitle {
-    visibility: visible; }
+    visibility: visible;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 0.5em; }
 
   .blog-content {
     margin: 0 auto;
@@ -172,20 +203,44 @@ html {
     /*margin-left: 9.8em;*/
     float: left;
     max-width: 40em;
-    width: 75%; }
+    width: 75%;
+    clear: both; }
     .blog-content h1 {
       width: auto;
       max-width: 40em;
       font-weight: 900;
       letter-spacing: 0.1em; }
     .blog-content .box-button {
-      margin-bottom: 3em; }
+      margin-bottom: 3em;
+      margin-right: 0; }
+    .blog-content .box-expanded {
+      display: block;
+      margin-top: 1em; }
+    .blog-content .outer-box {
+      float: right; }
+    .blog-content .left-box {
+      float: left; }
+    .blog-content .box-wrapper {
+      width: 31.8em; }
+    .blog-content #blue-box {
+      background-color: #106db2; }
 
   .social {
     float: right;
     margin: 0 auto;
     border-bottom: none;
     width: 25%; }
+    .social .ad-box .sidebar-heading {
+      display: block; }
+    .social .social-image {
+      margin-top: 0.5em; }
+      .social .social-image div {
+        display: block;
+        float: left;
+        font-size: 1em;
+        font-weight: 100; }
+      .social .social-image #middle {
+        margin: 0 2em; }
 
   .popular-posts {
     clear: both;
@@ -215,8 +270,31 @@ html {
       font-size: 16px; }
 
   .footer {
-    clear: both;
-    margin: 0 auto; }
+    margin: 0 auto;
+    /*float:left;*/
+    width: 100%;
+    padding-bottom: 2.13em;
+    font-weight: 100;
+    display: inline-block; }
+    .footer .logo-copyright {
+      float: left;
+      margin-left: 6em; }
+      .footer .logo-copyright .IY-logo {
+        margin: 0 auto;
+        margin-right: 1em; }
+      .footer .logo-copyright div {
+        display: inline-block; }
+      .footer .logo-copyright h1 {
+        display: inline-block;
+        line-height: 3.18em; }
+    .footer ul {
+      float: right;
+      margin-right: 10em;
+      line-height: 3.18em; }
+    .footer li {
+      line-height: 3.18em; }
+    .footer #last-nav {
+      display: inline-block; }
 
   .blog-social-wrapper {
     padding-left: 9.8em;
