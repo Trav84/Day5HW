@@ -13,7 +13,8 @@ html {
     padding-top: 0.8em;
     padding-bottom: 0.6em;
     margin: 0 auto;
-    display: block; }
+    display: block;
+    border-radius: 100%; }
   .header h1 {
     margin: 0 auto; }
   .header img {
@@ -84,6 +85,8 @@ html {
   .social .social-image {
     margin-top: 4.75em;
     text-align: center; }
+    .social .social-image .icon-image {
+      border-radius: 100%; }
     .social .social-image div {
       display: inline-block;
       color: grey;

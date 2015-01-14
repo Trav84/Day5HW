@@ -15,6 +15,7 @@ html {
 		padding-bottom: 0.6em;
 		margin: 0 auto;
 		display:block;
+		border-radius:100%;
 	}
 
 	h1 {
@@ -122,6 +123,10 @@ html {
 	.social-image {
 		margin-top: 4.75em;
 		text-align:center;
+
+		.icon-image {
+			border-radius:100%;
+		}
 
 		div {
 			display:inline-block;
